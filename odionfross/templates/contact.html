@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GOdion Fross Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<a href="/" class="logo"><strong>Product Management</strong> Portfolio</a>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/odionfross/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://medium.com/@odionfross" target="_blank" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									<li><a href="https://github.com/odionfross" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Contact Me</h1>
+									</header>
+
+									<span class="image main"><img src="static/images/contact.jpg" alt="" /></span>
+
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>My interest in UX/UI design started from when I took the Multimedia Design and Development program at Humber College, where I studied not only UX/UI but also front-end development for two years. My extensive knowledge in coding enables me to speak better with developers, understand technical constraints even before designing, and articulate my design intention better.</p>
+								</section>
+
+							<!-- Form -->
+
+								<form method="post" action="#">
+									{% csrf_token %}
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="name" id="demo-name" value="" placeholder="Name" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="email" name="email" id="demo-email" value="" placeholder="Email" />
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<select name="category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Customer Service</option>
+												<option value="1">Feedback</option>
+												<option value="1">Other</option>
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-4 col-12-small">
+											<input type="radio" id="demo-priority-low" name="priority" checked>
+											<label for="demo-priority-low">Low</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="demo-priority-normal" name="priority">
+											<label for="demo-priority-normal">Normal</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="demo-priority-high" name="priority">
+											<label for="demo-priority-high">High</label>
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<textarea name="msg" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="primary" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; 2020 OdionFross.com. All rights reserved.</p>
+							</footer>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="/">Homepage</a></li>
+									<li><a href="/about">About</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="/projects">CareConnect</a></li>
+											<li><a href="#">Designers Outfits</a></li>
+											<li><a href="#">That Movie Site</a></li>
+											<li><a href="#">Africa Wanderlust</a></li>
+											<li><a href="#">Faber & Co</a></li>
+											<li><a href="#">Internal Social Network</a></li>
+										</ul>
+									</li>
+									<li><a href="/contact">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/js/jquery.min.js"></script>
+			<script src="static/js/browser.min.js"></script>
+			<script src="static/js/breakpoints.min.js"></script>
+			<script src="static/js/util.js"></script>
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>

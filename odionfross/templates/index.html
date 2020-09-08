@@ -9,7 +9,7 @@
 		<title>Odion Fross Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/static/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -90,54 +90,16 @@
 										<h2>Projects</h2>
 									</header>
 									<div class="posts">
+                                        {% for p in all_projects %}
 										<article>
-											<a href="#" class="image"><img src="static/images/care-connect.jpg" alt="" /></a>
-											<h3>CareConnect</h3>
-											<p>Worked with the Founder from ideation to launch of a web app that helps match grants to patients that have a critical illness so their medical expenses can be fully paid for.</p>
+											<a href="#" class="image"><img src="{{p.project_main_img}}" alt="" /></a>
+											<h3>{{p.project_name}}</h3>
+											<p>{{p.short_desc}}</p>
 											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
+												<li><a href="/project/{{p.id}}" class="button">More</a></li>
 											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="static/images/designers-outfits.jpg" alt="" /></a>
-											<h3>Designers Outfits</h3>
-											<p>From idea to MVP: this web app helps users find designer brand items on sale or similar alternatives from top designer brand stores like Nordstrom, Saks Fifth Venue, Farfetch, Neiman Marcus, Ssence, and more.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="static/images/that-movie-site.jpg" alt="" /></a>
-											<h3>That Movie Site</h3>
-											<p>Increase average session duration by 47% (01:27), bounce rate by 9.74% and doubled retention resulting in a 33% conversion and revenue increase.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="static/images/africa-wanderlust.jpg" alt="" /></a>
-											<h3>Africa Wanderlust</h3>
-											<p>Successful product delivery with end to end ownership, product roadmap, strategy, and go-to-market for 130,000 viewers.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="static/images/faber-and-co.jpg" alt="" /></a>
-											<h3>Product Release for Faber & Co</h3>
-											<p>Managed the sprint backlog, implemented product improvements, and identified 30+ bugs and enhancements to improve customers' experience.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="static/images/internal-social-network.jpg" alt="" /></a>
-											<h3>Internal Social Network</h3>
-											<p>Created a Minimum Viable Product (MVP) with a developer to improve the company's internal communication. Conducted research to ensure a product-market fit.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
+                                        </article>
+                                        {% endfor %}
 									</div>
                                 </section>
                                 
@@ -171,12 +133,9 @@
                                         <li>
 											<span class="opener">Projects</span>
 											<ul>
-												<li><a href="/projects">CareConnect</a></li>
-												<li><a href="#">Designers Outfits</a></li>
-												<li><a href="#">That Movie Site</a></li>
-                                                <li><a href="#">Africa Wanderlust</a></li>
-                                                <li><a href="#">Faber & Co</a></li>
-                                                <li><a href="#">Internal Social Network</a></li>
+                                                {% for p in all_projects %}
+												<li><a href="/project/{{p.id}}">{{p.project_name}}</a></li>
+                                                {% endfor %}
 											</ul>
 										</li>
 										<li><a href="/contact">Contact</a></li>
@@ -189,11 +148,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="static/js/jquery.min.js"></script>
-			<script src="static/js/browser.min.js"></script>
-			<script src="static/js/breakpoints.min.js"></script>
-			<script src="static/js/util.js"></script>
-			<script src="static/js/main.js"></script>
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/browser.min.js"></script>
+			<script src="/static/js/breakpoints.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
 
 	</body>
 </html>

@@ -9,7 +9,7 @@
 		<title>GOdion Fross Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/css/main.css" />
+		<link rel="stylesheet" href="/static/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -121,12 +121,9 @@
 									<li>
 										<span class="opener">Projects</span>
 										<ul>
-											<li><a href="/projects">CareConnect</a></li>
-											<li><a href="#">Designers Outfits</a></li>
-											<li><a href="#">That Movie Site</a></li>
-											<li><a href="#">Africa Wanderlust</a></li>
-											<li><a href="#">Faber & Co</a></li>
-											<li><a href="#">Internal Social Network</a></li>
+											{% for p in all_projects %}
+											<li><a href="/project/{{p.id}}">{{p.project_name}}</a></li>
+											{% endfor %}
 										</ul>
 									</li>
 									<li><a href="/contact">Contact</a></li>
@@ -138,11 +135,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="static/js/jquery.min.js"></script>
-			<script src="static/js/browser.min.js"></script>
-			<script src="static/js/breakpoints.min.js"></script>
-			<script src="static/js/util.js"></script>
-			<script src="static/js/main.js"></script>
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/browser.min.js"></script>
+			<script src="/static/js/breakpoints.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
 
 	</body>
 </html>

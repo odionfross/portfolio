@@ -33,59 +33,29 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Contact Me</h1>
+										<h1>Admin</h1>
 									</header>
 
-									<span class="image main"><img src="static/images/contact.jpg" alt="" /></span>
+									<span class="image main"><img src="static/images/admin.jpg" alt="" /></span>
 
 									<header class="major">
-										<h2>Get in touch</h2>
+										<h2>Log In</h2>
 									</header>
-									<p>My interest in UX/UI design started from when I took the Multimedia Design and Development program at Humber College, where I studied not only UX/UI but also front-end development for two years. My extensive knowledge in coding enables me to speak better with developers, understand technical constraints even before designing, and articulate my design intention better.</p>
+									<p>You'll need to enter the secrete key to make changes</p>
 								</section>
 
-							<!-- Form -->
+							<!-- Log In Form -->
 
-								<form method="post" action="/contact">
+								<form method="post" action="/admin">
 									{% csrf_token %}
 									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="name" id="demo-name" value="" placeholder="Name" />
-										</div>
-										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="demo-email" value="" placeholder="Email" />
-										</div>
-										<!-- Break -->
 										<div class="col-12">
-											<select name="category" id="demo-category">
-												<option value="">- Category -</option>
-												<option value="opportunity">Work with me</option>
-												<option value="feedback">Feedback</option>
-												<option value="customer-service">Report a problem</option>
-												<option value="other">Other</option>
-											</select>
-										</div>
-										<!-- Break -->
-										<div class="col-4 col-12-small">
-											<input type="radio" id="demo-priority-low" name="priority" value="low">
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="col-4 col-12-small">
-											<input type="radio" id="demo-priority-normal" name="priority" value="normal">
-											<label for="demo-priority-normal">Normal</label>
-										</div>
-										<div class="col-4 col-12-small">
-											<input type="radio" id="demo-priority-high" name="priority" value="high">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<!-- Break -->
-										<div class="col-12">
-											<textarea name="msg" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											<input type="password" name="secret_key" id="demo-name" value="" placeholder="What is the secret admin key" />
 										</div>
 										<!-- Break -->
 										<div class="col-12">
 											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="primary" /></li>
+												<li><input type="submit" value="Access" class="primary" /></li>
 												<li><input type="reset" value="Reset" /></li>
 											</ul>
 										</div>

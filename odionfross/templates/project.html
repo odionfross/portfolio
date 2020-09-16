@@ -39,6 +39,15 @@
 									<span class="image main"><img src="{{one_project.project_main_img}}" alt="" /></span>
 
 									<p>{{one_project.short_desc}}</p>
+									<div class="col-12">
+										<ul class="actions">
+											{% if request.session.user_id == 1 %}
+											<li><a href="/edit_project/{{one_project.id}}" class="button">Edit</a></li>
+											<li><a href="/delete_project/{{one_project.id}}" class="button">Delete</a></li>
+											<li><a href="/log_out" class="button">Logout</a></li>
+											{% endif %}
+										</ul>
+									</div>
 
 									<hr class="major" />
 
@@ -83,7 +92,7 @@
 
 									<hr class="major" />
 									<header class="major">
-										<h2>E{{one_project.solution_heading}}</h2>
+										<h2>{{one_project.solution_heading}}</h2>
 									</header>
 									<p><span class="image right"><img src="{{one_project.solution_img}}" alt="" /></span>{{one_project.solution_desc1}}.</p>
 									<p>{{one_project.solution_desc2}}</p>
@@ -125,7 +134,7 @@
 
 							<!-- Footer -->
 							<footer id="footer">
-								<p class="copyright">&copy; 2020 OdionFross.com. All rights reserved.</p>
+								<p class="copyright">&copy; 2020 OdionFross.com. All rights reserved. <a href="/admin"> Admin</a></p>
 							</footer>
 
 						</div>

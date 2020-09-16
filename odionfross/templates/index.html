@@ -88,6 +88,11 @@
 								<section>
 									<header class="major">
 										<h2>Projects</h2>
+										<ul class="actions">
+											{% if request.session.user_id == 1 %}
+											<li><a href="/new_project" class="button primary large">Add New Project</a></li>
+											{% endif %}
+										</ul>
 									</header>
 									<div class="posts">
                                         {% for p in all_projects %}
@@ -95,9 +100,16 @@
 											<a href="#" class="image"><img src="{{p.project_main_img}}" alt="" /></a>
 											<h3>{{p.project_name}}</h3>
 											<p>{{p.short_desc}}</p>
-											<ul class="actions">
-												<li><a href="/project/{{p.id}}" class="button">More</a></li>
-											</ul>
+												<div class="col-12">
+													<ul class="actions">
+														<li><a href="/project/{{p.id}}" class="button">More</a></li>
+														{% if request.session.user_id == 1 %}
+														<li><a href="/edit_project/{{p.id}}" class="button">Edit</a></li>
+														<li><a href="/delete_project/{{p.id}}" class="button">Delete</a></li>
+														<li><a href="/log_out" class="button">Logout</a></li>
+														{% endif %}
+													</ul>
+												</div>
                                         </article>
                                         {% endfor %}
 									</div>
@@ -105,7 +117,7 @@
                                 
                             <!-- Footer -->
 								<footer id="footer">
-									<p class="copyright">&copy; 2020 OdionFross.com. All rights reserved.</p>
+                                    <p class="copyright">&copy; 2020 OdionFross.com. All rights reserved. <a href="/admin"> Admin</a></p>
 								</footer>
 
 						</div>
